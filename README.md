@@ -24,8 +24,7 @@ In parent directory you will see directory called "database", you can run this s
 
 Then you have postman directory in parent, this is a postman collection that you can import on your postman. You can create new Environment to automatically set token for each request.
 
-
-
+Rate limiter based on role, in role table have column limit. we will read value of limit of role user that trying to make a request in filter chain. If it exceeded of limit, it will throw error 429 Too Many Requests.
 
 
 
