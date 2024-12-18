@@ -1,4 +1,3 @@
-
 # Vendor Management
 
 This vendor management consist of several entity or table. Table like below:
@@ -26,6 +25,7 @@ Then you have postman directory in parent, this is a postman collection that you
 
 Rate limiter based on role, in role table have column limit. we will read value of limit of role user that trying to make a request in filter chain. If it exceeded of limit, it will throw error 429 Too Many Requests.
 
+Before create a request you must log in first, except for user registration
 
 
 ## Features
@@ -35,3 +35,26 @@ Rate limiter based on role, in role table have column limit. we will read value 
 - Pagination for api get all
 - Request Validation
 - URI whitelist
+
+## Features
+
+- Authentication with JWT
+- Rate Limiter with Bucket4J and Redis
+- Pagination for api get all
+- Request Validation
+- URI whitelist
+
+
+## API Reference
+
+#### Login
+
+```http
+  POST /api/v1/login
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `username` | `string` | **Required**. Your username, If you run default data sql, you can use **satrio123** |
+| `password` | `string` | **Required**. Your password, If you run default data sql, you can use **Admin123**|
+
